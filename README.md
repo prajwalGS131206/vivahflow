@@ -1,58 +1,102 @@
-# VivahFlow
+# VivahFlow — Smart Wedding Management Platform
 
-A clean React + Vite + TypeScript starter for an Indian wedding guest-management product.
+VivahFlow is a web application designed to help Indian weddings manage guest invitations, RSVPs, actual attendance, catering requirements, food waste, and event budgets from one dashboard.
 
-## Current demo features
+The goal is to make wedding planning more organized, reduce unnecessary food preparation, and give organizers better visibility into guest attendance and expenses.
 
-- Dashboard overview with illustrative invitation, RSVP, arrival, and catering metrics
-- Guest list search and RSVP filtering
-- Add household demo flow
-- Manual arrival check-in and undo
-- Events overview
-- Food budget estimate based on configurable demo assumptions
-- Responsive layout for desktop and mobile
+## ✨ Features
 
-## Important
+### Currently implemented
 
-This version uses in-memory sample data. Guest edits reset when the page refreshes. There is no real authentication, database, messaging, QR scanning, or payment integration yet. Figures are illustrative, not actual savings or attendance predictions.
+- **Wedding Dashboard** — Overview of wedding details and guest statistics.
+- **Guest Management** — View, search, and filter the guest list.
+- **Household Registration** — Add guest households through the interface.
+- **RSVP Tracking** — Update guest response statuses.
+- **Attendance Check-in** — Manually record guest arrivals.
+- **Food & Budget Dashboard** — View demo catering estimates and budget information.
+- **Responsive Interface** — Designed to work across desktop and smaller screens.
 
-## Run locally
+### Planned features
 
-Install Node.js LTS, then from this folder:
+- Persistent database for guests, events, RSVPs, and attendance.
+- Unique QR codes for invitations and faster check-in.
+- WhatsApp and SMS invitation integrations.
+- Expected-versus-actual attendance analytics.
+- Catering quantity recommendations based on confirmed attendance.
+- Food waste estimation and reporting.
+- Per-event and overall budget tracking.
+- Secure organizer accounts and role-based access.
+- Exportable guest lists and event reports.
 
-```bash
-npm install
-npm run dev
-```
+> **Current status:** Early-stage prototype. Guest data and changes are currently held in application memory and may reset when the page is refreshed. Database persistence and the planned integrations are not implemented yet.
 
-Open the local URL shown in the terminal (usually http://localhost:5173).
+## 🛠️ Tech Stack
 
-To check the production build:
+- **Frontend:** React
+- **Language:** TypeScript
+- **Build tool:** Vite
+- **Icons:** Lucide React
+- **Styling:** CSS
+- **Version control:** Git and GitHub
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Install the following:
+
+- [Node.js](https://nodejs.org/) — includes npm
+- [Git](https://git-scm.com/)
+- [Visual Studio Code](https://code.visualstudio.com/) (recommended)
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/prajwalGS131206/vivahflow.git
+   ```
+
+2. Enter the project directory:
+
+   ```bash
+   cd vivahflow
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Open the local URL displayed in the terminal. Vite commonly uses:
+
+   `http://localhost:5173/`
+
+### Production build
+
+To check the project and generate production files, run:
 
 ```bash
 npm run build
 ```
 
-## GitHub
+The generated production files are placed in the `dist/` directory.
 
-Create an empty repository named `vivahflow` on GitHub (do not add a README or .gitignore there if you already have them here). Then:
+## 📁 Project Structure
 
-```bash
-git init
-git add .
-git commit -m "chore: create VivahFlow starter"
-git branch -M main
-git remote add origin https://github.com/YOUR-USERNAME/vivahflow.git
-git push -u origin main
-```
-
-Replace `YOUR-USERNAME` with your GitHub username. `.gitignore` excludes `node_modules`, build output, and environment files.
-
-## Planned next milestones
-
-1. Persist guest records in a database.
-2. Add authentication and per-wedding access control.
-3. Add unique RSVP links and event-specific attendance.
-4. Add QR check-in with duplicate-scan protection.
-5. Add configurable catering minimums and forecast ranges.
-6. Add real messaging integrations only after consent, cost, and compliance review.
+```text
+vivahflow/
+├── src/
+│   ├── App.tsx          # Main application and dashboard
+│   ├── main.tsx         # Application entry point
+│   ├── styles.css       # Application styling
+│   └── vite-env.d.ts    # Vite TypeScript declarations
+├── .env.example         # Example environment configuration
+├── .gitignore          # Files excluded from Git
